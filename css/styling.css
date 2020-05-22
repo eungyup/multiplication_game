@@ -1,0 +1,197 @@
+/* Learned from The Complete 2020 Web Developer Bootcamp by Development Island */
+/* Practiced it on my own */
+
+html{
+    /* height, background: gradial */
+    height: 100%;
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* 1. Container */
+#container{
+    /* width, height, background-color, margin, padding, border-radius, box-shadow */
+    /* position: relative; (set up for other divs position) */
+    width: 550px;
+    height: 400px;
+    background-color: #9ee6f7;
+    margin: 15vh auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px #4eb5cf;
+    position: relative;
+}
+
+/* 2. Score Box */
+#score{
+    /* position, left, background-color, color, padding, box-shadow */
+    position: absolute;
+    left: 80%;
+    background-color: #bbf2c7;
+    /* color: white; */
+    padding: 10px;
+    box-shadow: 0 4px #17ad37;
+}
+
+/* 3. Correct & Wrong Message */
+#correct{
+    /* position, left, top, background-color, color, padding, border-radius, display: none; */
+    position: absolute;
+    left: 45%;
+    top: 5%;
+    background-color: #51f573;
+    /* color: white; */
+    padding: 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+#wrong{
+    /* position, left, top, background-color, color, padding, border-radius, display: none; */
+    position: absolute;
+    left: 44%;
+    top: 5%;
+    background-color: #EB142A;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+/* 4. Question Box */
+#question{
+    /* width, height, background-color, margin, box-shadow */
+    /* font-family, font-size, text-align, line-height */
+    width: 450px;
+    height: 150px;
+    background-color: #a587e6;
+    margin: 50px auto 10px auto;
+    box-shadow: 0 4px plum;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5em;
+    text-align: center;
+    line-height: 2em;
+}
+
+/* 5. Instruction Box */
+#instruction{
+    /* width, height, background-color, margin, box-shadow */
+    /* text-align, line-height */
+    width: 450px;
+    height: 40px;
+    background-color: #b06ee6;
+    margin: 10px auto;
+    box-shadow: 0 4px plum;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+/* 6. Choices */
+#choices{
+    /* width, height, margin (background-color to check) */
+    width: 450px;
+    height: 90px;
+    margin: 10px auto;
+    /* background-color: lightgreen; */
+}
+
+.box{
+    /* width, height, float(left)/display(inline-block), background-color,
+    margin, box-shadow, border-radius, cursor
+    */
+    /* text-align, font-size, line-height */
+    width: 97px;
+    height: 90px;
+    /* float: left; */
+    display: inline-block;
+    background-color: white;
+    margin: 0 5px;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 4em;
+    cursor: pointer;
+    /* 7. Transition - Box shadow disappeared in 0.2 seconds */
+    transition: all 0.2s;
+    position: relative;
+}
+
+.box:hover, #startreset:hover{
+    /* background-color, color, box-shadow */
+    background-color: #c38af2;
+    color: white;
+    box-shadow: 0 4px #8b11f0;
+}
+
+/* 7. Transition - Box shadow disappeared in 0.2 seconds when clicked */
+.box:active, #startreset:active{
+    /* top, box-shadow  */
+    top: 4px;
+    /* background-color: #c38af2;
+    color: white; */
+    box-shadow: 0 2px #c38af2;
+    /* for mobile and table which is difficult to hover, put hovering code below */
+    background-color: #c38af2;
+    color: white;
+}
+
+/* 8. Start & Reset Button */
+#startreset{
+    /* width, background-color, padding, margin, box-shadow, border-radius */
+    /* text-align, line-height */
+    /* cursor */
+    width: 90px;
+    background-color: #31d4c9;
+    padding: 10px;
+    margin: 10px auto;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-align: center;
+    line-height: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+/* 9. TimeRemaining */
+#timeremaining{
+    /* background-color, width, padding, position, top, left,  box-shadow, border-radius */
+    /* font-size, text-align */
+    /* display: none */
+    background-color: lightgreen;
+    width: 150px;
+    padding: 10px;
+    position: absolute;
+    top: 380px;
+    left: 70%;
+    box-shadow: 0 4px rgba(0,0,0,0.2);
+    border-radius: 3px;
+    font-size: 0.9em;
+    text-align: center;
+    display: none;
+}
+
+/* 10. Game Over Popup */
+#gameOver{
+    /* width, height, background: linear-gradient, color, position, top, left, z-index */
+    /* text-transform, font-size, text-align, line-height */
+    /* display: none; */
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(#ebbe91, #e87a0c);
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 45px;
+    z-index: 2;
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    line-height: 2em;
+    display: none;
+}
